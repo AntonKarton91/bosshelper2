@@ -1,6 +1,6 @@
 import os
 import re
-from datetime import time, datetime
+from datetime import datetime
 from openpyxl.styles import Font
 import openpyxl
 
@@ -118,8 +118,9 @@ class OutputSheet(Sheets):
     def del_sheet(self, sheet):
         for i in range(1,500):
             for j in range(1,5):
-                if sheet.cell(row=i, column=j).value and sheet.cell(row=i, column=j).value==0:
+                if sheet.cell(row=i, column=j).value!=None:
                     sheet.cell(row=i, column=j).value=None
+                    sheet.cell(row=i, column=j).font=Font(bold=False)
 
 
 
