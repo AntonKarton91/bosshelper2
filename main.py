@@ -1,20 +1,9 @@
-import os
-import re
-import openpyxl
-
+from checkFiles import checkFiles
+from employerList import emloyers_list
 from sheets import InputSheet, OutputSheet
-print(1)
-emloyers_list = [
-    {'name': 'Антон', 'surname': 'Киселев', 'stage': 'Конструктор'},
-    {'name': 'Соловьев', 'surname': 'Михаил', 'stage': 'Конструктор'},
-    {'name': 'Денис', 'surname': 'Хохин', 'stage': 'Конструктор'},
-    {'name': 'Александр', 'surname': 'Никитин', 'stage': 'Конструктор'},
-    {'name': 'Дмитрий', 'surname': 'Бычков', 'stage': 'Конструктор'},
-    {'name': 'Элеонора', 'surname': 'Йер', 'stage': 'Дизайнер'},
-    {'name': 'Елена', 'surname': 'Пухова', 'stage': 'Дизайнер'},
-    {'name': 'Стас', 'surname': 'Гагров', 'stage': 'Дизайнер'},
-    {'name': 'Егор', 'surname': 'Горячкин', 'stage': 'Мухожук'},
-]
+
+
+checkFiles((emloyers_list))
 
 for i in emloyers_list:
     print(i['name']+' '+i['surname'])
